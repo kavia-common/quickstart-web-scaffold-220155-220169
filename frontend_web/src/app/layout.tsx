@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import NavBar from "@/components/NavBar";
+import ThemeInit from "@/app/ThemeInit";
 
 export const metadata: Metadata = {
   title: "Quickstart Retro",
@@ -15,6 +16,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body suppressHydrationWarning>
+        <ThemeInit />
         <div className="page">
           <NavBar />
           <div className="shell">{children}</div>
