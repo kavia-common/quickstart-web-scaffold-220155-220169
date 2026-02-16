@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import NavBar from "@/components/NavBar";
 
 export const metadata: Metadata = {
-  title: "Minimal Next.js App",
-  description: "Ultra-minimal Next.js application",
+  title: "Quickstart Retro",
+  description: "Minimal quickstart scaffold with a retro-themed UI and an Express-backed API demo.",
 };
 
 export default function RootLayout({
@@ -14,7 +15,10 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body suppressHydrationWarning>
-        {children}
+        <div className="page">
+          <NavBar />
+          <div className="shell">{children}</div>
+        </div>
       </body>
     </html>
   );
